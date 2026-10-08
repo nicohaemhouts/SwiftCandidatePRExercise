@@ -5,9 +5,12 @@ struct ListingsContentView: View {
     let listings: [Listing]
 
     var body: some View {
-        List(listings) { listing in
-            NavigationLink(value: listing) {
-                ListingRow(listing: listing)
+        List {
+            ForEach(listings.indices, id: \.self) { index in
+                NavigationLink(value: listings[index]) {
+                    ListingRow(listing: listings[index])
+                }
+                .listRowBackground(index.isMultiple(of: 2) ? Color.clear : Color(.secondarySystemBackground))
             }
         }
         .listStyle(.plain)
