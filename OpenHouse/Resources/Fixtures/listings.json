@@ -1,0 +1,88 @@
+{
+  "listings": [
+    {
+      "id": "L-1001",
+      "address": "14 Wattle Street",
+      "suburb": "Newtown NSW 2042",
+      "price": 1850000,
+      "currency_code": "AUD",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking": 1,
+      "property_type": "house",
+      "status": "for_sale",
+      "image_url": "https://picsum.photos/seed/L-1001/900/600",
+      "listed_at": "2026-09-28T03:15:00Z"
+    },
+    {
+      "id": "L-1002",
+      "address": "7/22 Harbour View Road",
+      "suburb": "Manly NSW 2095",
+      "price": 1295000,
+      "currency_code": "AUD",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "parking": 1,
+      "property_type": "apartment",
+      "status": "under_offer",
+      "image_url": "https://picsum.photos/seed/L-1002/900/600",
+      "listed_at": "2026-09-21T22:40:00Z"
+    },
+    {
+      "id": "L-1003",
+      "address": "3 Banksia Lane",
+      "suburb": "Brunswick VIC 3056",
+      "price": 1120000,
+      "currency_code": "AUD",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "parking": 2,
+      "property_type": "townhouse",
+      "status": "for_sale",
+      "image_url": "https://picsum.photos/seed/L-1003/900/600",
+      "listed_at": "2026-10-01T06:00:00Z"
+    },
+    {
+      "id": "L-1004",
+      "address": "101/5 Riverside Quay",
+      "suburb": "Southbank VIC 3006",
+      "price": 760000,
+      "currency_code": "AUD",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "parking": 0,
+      "property_type": "apartment",
+      "status": "for_sale",
+      "image_url": "https://picsum.photos/seed/L-1004/900/600",
+      "listed_at": "2026-10-03T01:30:00Z"
+    },
+    {
+      "id": "L-1005",
+      "address": "48 Jacaranda Avenue",
+      "suburb": "Paddington QLD 4064",
+      "price": 2400000,
+      "currency_code": "AUD",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "parking": 2,
+      "property_type": "house",
+      "status": "sold",
+      "image_url": "https://picsum.photos/seed/L-1005/900/600",
+      "listed_at": "2026-08-30T23:00:00Z"
+    },
+    {
+      "id": "L-1006",
+      "address": "9 Grevillea Court",
+      "suburb": "Fremantle WA 6160",
+      "price": 985000,
+      "currency_code": "AUD",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "parking": 1,
+      "property_type": "house",
+      "status": "for_sale",
+      "image_url": "https://picsum.photos/seed/L-1006/900/600",
+      "listed_at": "2026-09-15T04:45:00Z"
+    }
+  ]
+}
