@@ -1,7 +1,36 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "^[%lld bathroom](inflect: true)" : {
 
+    },
+    "^[%lld bedroom](inflect: true)" : {
+
+    },
+    "^[%lld parking space](inflect: true)" : {
+
+    },
+    "%lld" : {
+
+    },
+    "Check your connection and try again." : {
+
+    },
+    "Couldn't load listings" : {
+
+    },
+    "Listed %@" : {
+      "comment" : "Shown under the address. The variable is the date the listing went live."
+    },
+    "Listings" : {
+
+    },
+    "Photo of the property" : {
+
+    },
+    "Retry" : {
+
+    }
   },
   "version" : "1.0"
 }
