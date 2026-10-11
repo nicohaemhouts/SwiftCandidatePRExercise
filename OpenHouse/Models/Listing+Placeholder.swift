@@ -16,6 +16,10 @@ extension Listing {
             propertyType: .house,
             status: .forSale,
             imageURL: nil,
+            imageURLs: [],
+            descriptionText: String(repeating: "Placeholder description text. ", count: 6),
+            agent: Agent(name: "Agent Name", agency: "Agency Name", phone: "0400 000 000", photoURL: nil),
+            inspections: [],
             listedAt: Date(timeIntervalSince1970: 0)
         )
     }

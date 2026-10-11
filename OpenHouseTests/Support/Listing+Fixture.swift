@@ -19,6 +19,10 @@ extension Listing {
             propertyType: .house,
             status: status,
             imageURL: nil,
+            imageURLs: [],
+            descriptionText: "A lovely home.",
+            agent: Agent(name: "Sam Taylor", agency: "Taylor & Co", phone: "0412 345 678", photoURL: nil),
+            inspections: [],
             listedAt: Date(timeIntervalSince1970: 1_758_000_000)
         )
     }

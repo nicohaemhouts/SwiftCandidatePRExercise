@@ -1,12 +1,11 @@
 import SwiftUI
 
-/// Loading view: owns the store, switches over its state, and triggers fetches.
+/// Loading view: switches over the store's state and triggers fetches.
 struct ListingsView: View {
-    @State private var store: ListingsStore
+    @Environment(ListingsStore.self) private var store
 
-    init(service: any ListingProviding) {
-        _store = State(wrappedValue: ListingsStore(service: service))
-    }
+    @State var query = ""
+    @State private var isShowingFilters = false
 
     var body: some View {
         NavigationStack {
@@ -15,17 +14,48 @@ struct ListingsView: View {
                 .navigationDestination(for: Listing.self) { listing in
                     ListingDetailView(listing: listing)
                 }
+                .searchable(text: $query, prompt: "Search suburb or street")
+                .onChange(of: query) { newValue in
+                    store.filter.query = newValue
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Menu {
+                            Picker("Sort", selection: Binding(
+                                get: { store.filter.sort },
+                                set: { store.filter.sort = $0 }
+                            )) {
+                                ForEach(ListingFilter.Sort.allCases, id: \.self) { sort in
+                                    Text(sort.title).tag(sort)
+                                }
+                            }
+                            Picker("Property type", selection: Binding(
+                                get: { store.filter.propertyType },
+                                set: { store.filter.propertyType = $0 }
+                            )) {
+                                Text("Any").tag(Listing.PropertyType?.none)
+                                ForEach(Listing.PropertyType.allCases, id: \.self) { type in
+                                    Text(type.rawValue.capitalized).tag(Optional(type))
+                                }
+                            }
+                        } label: {
+                            Image(systemName: "line.3.horizontal.decrease.circle")
+                        }
+                    }
+                }
         }
-        .task {
-            await store.fetchListings()
+        .onAppear {
+            Task {
+                await store.fetchListings()
+            }
         }
     }
 
     @ViewBuilder
     private var content: some View {
         switch store.listingsState {
-        case .success(let listings):
-            ListingsContentView(listings: listings)
+        case .success:
+            ListingsContentView(listings: store.visibleListings)
                 .refreshable {
                     await store.fetchListings()
                 }
@@ -44,5 +74,7 @@ struct ListingsView: View {
 }
 
 #Preview {
-    ListingsView(service: FixtureListingService(delay: .zero))
+    ListingsView()
+        .environment(ListingsStore(service: FixtureListingService(delay: .zero)))
+        .environmentObject(FavouritesStore())
 }

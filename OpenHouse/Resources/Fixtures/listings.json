@@ -12,7 +12,23 @@
       "property_type": "house",
       "status": "for_sale",
       "image_url": "https://picsum.photos/seed/L-1001/900/600",
-      "listed_at": "2026-09-28T03:15:00Z"
+      "image_urls": [
+        "https://picsum.photos/seed/L-1001-1/900/600",
+        "https://picsum.photos/seed/L-1001-2/900/600",
+        "https://picsum.photos/seed/L-1001-3/900/600"
+      ],
+      "listed_at": "2026-09-28T03:15:00Z",
+      "description": "Light-filled Victorian terrace on a quiet tree-lined street, moments from King Street. Three generous bedrooms, a renovated kitchen opening to a north-facing courtyard, and off-street parking.",
+      "agent": {
+        "name": "Priya Nair",
+        "agency": "Inner West Property",
+        "phone": "0412 345 678",
+        "photo_url": "https://picsum.photos/seed/Priya/200/200"
+      },
+      "inspections": [
+        "2026-10-10T00:00:00Z",
+        "2026-10-14T06:30:00Z"
+      ]
     },
     {
       "id": "L-1002",
@@ -26,7 +42,22 @@
       "property_type": "apartment",
       "status": "under_offer",
       "image_url": "https://picsum.photos/seed/L-1002/900/600",
-      "listed_at": "2026-09-21T22:40:00Z"
+      "image_urls": [
+        "https://picsum.photos/seed/L-1002-1/900/600",
+        "https://picsum.photos/seed/L-1002-2/900/600",
+        "https://picsum.photos/seed/L-1002-3/900/600"
+      ],
+      "listed_at": "2026-09-21T22:40:00Z",
+      "description": "Two-bedroom apartment with uninterrupted harbour views from every room. Level lift access, secure parking and a short stroll to the beach and ferry.",
+      "agent": {
+        "name": "Tom Reilly",
+        "agency": "Northern Beaches Realty",
+        "phone": "0433 987 654",
+        "photo_url": "https://picsum.photos/seed/Tom/200/200"
+      },
+      "inspections": [
+        "2026-10-11T01:00:00Z"
+      ]
     },
     {
       "id": "L-1003",
@@ -40,7 +71,23 @@
       "property_type": "townhouse",
       "status": "for_sale",
       "image_url": "https://picsum.photos/seed/L-1003/900/600",
-      "listed_at": "2026-10-01T06:00:00Z"
+      "image_urls": [
+        "https://picsum.photos/seed/L-1003-1/900/600",
+        "https://picsum.photos/seed/L-1003-2/900/600",
+        "https://picsum.photos/seed/L-1003-3/900/600"
+      ],
+      "listed_at": "2026-10-01T06:00:00Z",
+      "description": "Near-new townhouse with soaring ceilings, a double garage and a private rooftop deck. Walk to Sydney Road cafes and the Upfield bike path.",
+      "agent": {
+        "name": "Grace Huang",
+        "agency": "Brunswick Estate Agents",
+        "phone": "0401 222 333",
+        "photo_url": "https://picsum.photos/seed/Grace/200/200"
+      },
+      "inspections": [
+        "2026-10-10T02:00:00Z",
+        "2026-10-17T02:00:00Z"
+      ]
     },
     {
       "id": "L-1004",
@@ -54,7 +101,20 @@
       "property_type": "apartment",
       "status": "for_sale",
       "image_url": "https://picsum.photos/seed/L-1004/900/600",
-      "listed_at": "2026-10-03T01:30:00Z"
+      "image_urls": [
+        "https://picsum.photos/seed/L-1004-1/900/600",
+        "https://picsum.photos/seed/L-1004-2/900/600",
+        "https://picsum.photos/seed/L-1004-3/900/600"
+      ],
+      "listed_at": "2026-10-03T01:30:00Z",
+      "description": "Compact one-bedroom with floor-to-ceiling glass and a wraparound balcony over the river. Building amenities include a pool, gym and concierge.",
+      "agent": {
+        "name": "Luca Romano",
+        "agency": "Southbank Living",
+        "phone": "0455 111 999",
+        "photo_url": "https://picsum.photos/seed/Luca/200/200"
+      },
+      "inspections": []
     },
     {
       "id": "L-1005",
@@ -68,7 +128,20 @@
       "property_type": "house",
       "status": "sold",
       "image_url": "https://picsum.photos/seed/L-1005/900/600",
-      "listed_at": "2026-08-30T23:00:00Z"
+      "image_urls": [
+        "https://picsum.photos/seed/L-1005-1/900/600",
+        "https://picsum.photos/seed/L-1005-2/900/600",
+        "https://picsum.photos/seed/L-1005-3/900/600"
+      ],
+      "listed_at": "2026-08-30T23:00:00Z",
+      "description": "Classic Queenslander on 810sqm with wide verandahs, polished timber floors and a resort-style pool. Sold at auction.",
+      "agent": {
+        "name": "Hannah Doyle",
+        "agency": "Paddington & Co",
+        "phone": "0422 777 888",
+        "photo_url": "https://picsum.photos/seed/Hannah/200/200"
+      },
+      "inspections": []
     },
     {
       "id": "L-1006",
@@ -82,7 +155,22 @@
       "property_type": "house",
       "status": "for_sale",
       "image_url": "https://picsum.photos/seed/L-1006/900/600",
-      "listed_at": "2026-09-15T04:45:00Z"
+      "image_urls": [
+        "https://picsum.photos/seed/L-1006-1/900/600",
+        "https://picsum.photos/seed/L-1006-2/900/600",
+        "https://picsum.photos/seed/L-1006-3/900/600"
+      ],
+      "listed_at": "2026-09-15T04:45:00Z",
+      "description": "Character limestone cottage with a modern extension, solar panels and a productive veggie garden. A short bike ride to the Fremantle markets.",
+      "agent": {
+        "name": "Ben Okafor",
+        "agency": "Port City Realty",
+        "phone": "0466 555 444",
+        "photo_url": "https://picsum.photos/seed/Ben/200/200"
+      },
+      "inspections": [
+        "2026-10-12T04:00:00Z"
+      ]
     }
   ]
 }
