@@ -12,42 +12,22 @@ Open `OpenHouse.xcodeproj` and run the `OpenHouse` scheme. The scheme passes `-U
 ## Architecture
 
 ```mermaid
-flowchart LR
+flowchart TB
     App[OpenHouseApp]
 
-    subgraph Services
-        Env[AppEnvironment]
-        Proto{{ListingProviding}}
-        Live[LiveListingService]
-        Fixture[FixtureListingService]
-    end
-
-    subgraph Models
-        Store[ListingsStore]
-        State["LoadState: loading / success / failure"]
-    end
-
-    subgraph Views
-        LV[ListingsView]
-        Content[ListingsContentView]
-        Error[ListingsErrorView]
-        Detail[ListingDetailView]
-    end
-
-    App -->|makeListingService| Env
-    Env -->|-UseFixtures| Fixture
-    Env -->|otherwise| Live
+    App -->|makeListingService| Env[AppEnvironment]
+    Env -->|-UseFixtures| Fixture[FixtureListingService]
+    Env -->|otherwise| Live[LiveListingService]
+    Fixture -.conforms.-> Proto{{ListingProviding}}
     Live -.conforms.-> Proto
-    Fixture -.conforms.-> Proto
 
-    App -->|service| LV
-    LV -->|"@State owns"| Store
+    App -->|service| LV["ListingsView<br/>switches over LoadState"]
+    LV -->|"@State owns"| Store[ListingsStore]
     Store -->|fetchListings| Proto
-    Store --> State
-    State -->|switch| LV
-    LV --> Content
-    LV --> Error
-    Content -->|"NavigationLink(value:)"| Detail
+
+    LV --> Content[ListingsContentView]
+    LV --> Error[ListingsErrorView]
+    Content -->|"NavigationLink(value:)"| Detail[ListingDetailView]
 ```
 
 One `ListingsStore` per screen, created by the view that shows it. The store only talks to `ListingProviding`, so tests swap in a stub and the app swaps in fixtures with a launch argument. Content views receive plain values and never see the store.
